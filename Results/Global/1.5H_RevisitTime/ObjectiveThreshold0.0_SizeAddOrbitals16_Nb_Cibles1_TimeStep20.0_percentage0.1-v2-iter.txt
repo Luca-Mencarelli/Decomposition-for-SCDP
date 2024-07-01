@@ -1,0 +1,8 @@
+ lat : 32.0 ;long : 42.0; ;alpha : 8.369805327269022
+ 
+ Min number of satellites : 8.0;
+ Rate minValue (%) : 100.0;
+ MeanValue : 8.0;
+ MeanTime : 16.026609897613525;
+ StoreResult : [8.0];
+ StoreTime : [16.026609897613525]
