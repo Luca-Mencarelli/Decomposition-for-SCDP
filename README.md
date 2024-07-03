@@ -20,3 +20,8 @@ where <package_name> is one of the previous packages.
 ```
 julia main*.jl
 ```
+
+In particular:
+* ``main-random-random.jl`` implements the pure random strategy to generate and adding new orbits to the master problem;
+* ``main-random-v2iter.jl`` implements the DS-1 strategy to generate and adding new orbits to the master problem;
+* ``main-random-v3iter.jl`` implements the DS-2 strategy to generate and adding new orbits to the master problem; 
