@@ -24,4 +24,6 @@ julia main*.jl
 In particular the strategies implemented to generate and add new orbits to the master problem, are:
 * the pure random strategy in ``main-random-random.jl``;
 * the DS-1 strategy ``main-random-v2iter.jl``;
-* the DS-2 strategy ``main-random-v3iter.jl``;
+* the DS-2 strategy ``main-random-v3iter.jl``.
+
+To change problems parameters, such as number of revisit periods and time step width, please edit file ``SCDP/SCDP/src/constantes_physiques.jl``.
