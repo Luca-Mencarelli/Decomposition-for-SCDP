@@ -15,7 +15,7 @@ where <package_name> is one of the previous packages.
 
 ## Code
 
-``main-random*.jl`` files contain the main Julia scripts and to generate instances and obtain the corresponding results (contains in the directory ``Results/Global``). In order to run the code, it is sufficient to type in Terminal:
+``main-random*.jl`` files contain the main Julia scripts and to generate instances and obtain the corresponding results (contained in the directory ``Results/Global``). In order to run the code, it is sufficient to type in Terminal:
 
 ```
 julia main*.jl
