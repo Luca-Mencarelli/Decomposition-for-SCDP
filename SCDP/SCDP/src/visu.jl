@@ -11,8 +11,8 @@ function ecrireInst(inst::DonneesSCDP)
    matCoordsCibles = vcat((180coord[na, :]/π for coord in inst.coordsCibles)...)
    printstyled("\n*** Données de l'instance ***\n\n", color = :red)
    printstyled("Coordonnées des $(inst.nbCibles) cibles\n", color =:blue)
-   pretty_table(matCoordsCibles, header = (["Latitude", "Longitude"], ["deg", "deg"]), 
-                row_names = inst.nbCibles ≤ 26 ? alphabet[1:inst.nbCibles] : nothing)
+   pretty_table(matCoordsCibles, header = (["Latitude", "Longitude"], ["deg", "deg"]))#, 
+   #             row_names = inst.nbCibles ≤ 26 ? alphabet[1:inst.nbCibles] : nothing)
    print("Angle d'ouverture : $(180inst.angleOuverture/π) degrés\n")
    print("Instant initial : $(inst.instantInitial)\n")
    print("Nombre de jours de simulation : $(inst.m_simu)\n")
@@ -314,9 +314,9 @@ end
 """
 function TargetSatPlot(numbOfDiscretize, j, k, l, s)
 	# Discretization Keplerian parameters
-	inclinaisonSet = Discretization(numbOfDiscretize,0.0,pi)
-	noeudAscendantSet = Discretization(numbOfDiscretize,0.0,2*pi)
-	meanAnomalySet = Discretization(numbOfDiscretize,0.0,2*pi)
+	inclinaisonSet = Discretization(numbOfDiscretize,pi)
+	noeudAscendantSet = Discretization(numbOfDiscretize,2*pi)
+	meanAnomalySet = Discretization(numbOfDiscretize,2*pi)
 
 	x_projSat1 = fill(0.0,NUM_TIME)
 	y_projSat1 = fill(0.0,NUM_TIME)
@@ -408,7 +408,7 @@ end
 """
 function plot_target(x_target,y_target,z_target)
 	CreateEquatorialPlane()
-	CreateSfera(R_terre)
+	CreateSfera()
 	
 	PyPlot.title("NUMBER of TARGET : "*string(length(x_target)))
 	PyPlot.scatter3D(x_target,y_target,z_target, color = "blue")#, marker = "o", markersize = 5)	

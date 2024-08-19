@@ -100,7 +100,7 @@ mutable struct DonneesSCDP
 	  
 	  nbInstants = Int(T_terre/(n_0*dt)) #calculNbIntants(m_simu, n_0, angleOuverture, n_max, p)
 	  dt = (T_terre*m_simu)/(nbInstants*n_0)
-	  ts = LinRange(0, m_simu*T_terre, nbInstants*n_0 + 1)
+	  ts = LinRange(0, m_simu*T_terre, Int(nbInstants*n_0 + 1))
 
 	  instantInitialJulian = datetime2julian(instantInitial) 
 	  mats_ECI_ECEF = 

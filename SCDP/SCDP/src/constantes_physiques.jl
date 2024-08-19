@@ -54,7 +54,7 @@ end
 
 PERIOD_SAT_MIN = PERIOD_SAT[end]
 altitudeLength = length(altitudeSet)
-time_zero_simulation = DatetoJD(2000,1,1,12,0,0)#1970
+time_zero_simulation = date_to_jd(2000,1,1,12,0,0)#1970
 	
 # Compute Theta and alpha of a satellite
 theta_min = ((2*pi*dt)/(2*PERIOD_SAT_MIN))*1.2

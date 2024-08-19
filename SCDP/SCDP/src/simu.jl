@@ -478,12 +478,7 @@ function ExtractKepParamFromINDEX(INDEX)
 		global indtemp +=1
 		IndexMeanAnom[indtemp] = (i%N_meanAnomaly)
 		IndexAltitude[indtemp] = div(i,(N_meanAnomaly*N_RAAN*N_inclinaison)) + 1
-      
-      #if IndexAltitude[indtemp] > altitudeLength
-      #   IndexAltitude[indtemp] = altitudeLength
-      #end
-		
-      Indexinclination[indtemp] = div((i-((IndexAltitude[indtemp]-1)*(N_meanAnomaly*N_RAAN*N_inclinaison))),
+		Indexinclination[indtemp] = div((i-((IndexAltitude[indtemp]-1)*(N_meanAnomaly*N_RAAN*N_inclinaison))),
 											(N_meanAnomaly*N_RAAN)) + 1
 		IndexRaan[indtemp] = div((i-((IndexAltitude[indtemp]-1)*(N_meanAnomaly*N_RAAN*N_inclinaison))) -
 											(Indexinclination[indtemp]-1)*(N_meanAnomaly*N_RAAN),N_meanAnomaly) + 1
@@ -500,7 +495,7 @@ function ExtractKepParamFromINDEX(INDEX)
 		   IndexAltitude[indtemp] = 3
          IndexRaan[indtemp] = 27
          Indexinclination[indtemp] = 27
-      end
+		end
 
 		#if i != (((IndexAltitude[indtemp]-1)*AltProduct)+
 		#	((Indexinclination[indtemp]-1)*IncProduct)+
